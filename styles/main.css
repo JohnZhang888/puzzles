@@ -1,0 +1,104 @@
+:root {
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9;
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
+  --primary-950: #082f49;  
+}
+[data-bs-theme=light] {
+  --normal: var(--primary-700);
+  --hover: var(--primary-600);
+  --active: var(--primary-800);
+  --normal-bd: var(--primary-400);
+  --normal-bg: var(--primary-100);
+  --fg: #fff;  
+  .navbar {
+    background-color: #f1f5f9;
+  }
+}
+[data-bs-theme=dark] {
+  --normal: var(--primary-300);
+  --hover: var(--primary-200);
+  --active: var(--primary-400);
+  --normal-bd: var(--primary-600);
+  --normal-bg: var(--primary-900);
+  --fg: #000;
+  .navbar {
+    background-color: #1e293b;
+  }
+}
+
+.link {
+  color: var(--normal);
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--hover);
+}
+.link:active {
+  color: var(--active);
+}
+
+.normal-card {
+  background-color: var(--normal-bg);
+  border: 0.125rem solid var(--normal-bd);
+}
+.recent-card {
+  background-color: var(--normal);
+  border: 0.125rem solid var(--normal-bd);
+}
+.puzzle-card {
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 1rem;
+  min-width: 8rem;
+}
+.puzzle-card:hover {
+  filter: brightness(1.05)
+}
+.puzzle-card:active {
+  filter: brightness(0.95)
+}
+.puzzle-card p {
+  margin-bottom: 0rem;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--fg);
+  --bs-btn-bg: var(--normal);
+  --bs-btn-border-color: var(--normal);
+  --bs-btn-hover-color: var(--fg);
+  --bs-btn-hover-bg: var(--hover);
+  --bs-btn-hover-border-color: var(--hover);
+  --bs-btn-focus-shadow-rgb: 0, 155, 101;
+  --bs-btn-active-color: var(--fg);
+  --bs-btn-active-bg: var(--active);
+  --bs-btn-active-border-color: var(--active);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--fg);
+  --bs-btn-disabled-bg: var(--primary-400);
+  --bs-btn-disabled-border-color: var(--primary-400);
+}
+
+#logo {
+  height: 36px;
+}
+
+.-text, .-example {
+  font-size: 1.125rem;
+}
+
+@font-face {
+  font-family: "Cantarell";
+  src: url("Cantarell-VF.otf");
+}
+
+* {
+  font-family: "Cantarell", "Noto Sans SC", sans-serif
+}

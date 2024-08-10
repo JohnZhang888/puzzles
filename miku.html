@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="light" data-num="9">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="styles/bootstrap.min.css" rel="stylesheet">
+  <!--不要忘记更换这里的路径！-->
+  <link href="styles/main.css" rel="stylesheet">
+  <link href="styles/bootstrap-icons.min.css" rel="stylesheet">
+  <title class="-title"></title>
+  <link rel="shortcut icon" type="image/x-icon" href=“logo/shortcut.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+SC">
+  <link rel="stylesheet" href="styles/Cantarell-VF.otf">
+
+
+</head>
+
+<body>
+  <div id="Navbar"></div>
+  <div class="container puzzle-box d-none">
+    <br><br>
+    <div class="text-center">
+      <h2 class="-title"></h2>
+      <p class="-text">330 440 440 494 523 440 440 523 494 415 415 494 494 440 ?</p>
+    </div>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="-tips accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="-tips-text accordion-body">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+  <script src="scripts/js.cookie.min.js"></script>
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script>
+    function otherChineseText() {
+      ci('.-title', '第 9 题')
+      ci('.-tips-text', '与上一题有关。')
+    }
+    function otherEnglishText() {
+      ci('.-title', 'Puzzle 9')
+      ci('.-tips-text', 'It has something to do with the previous puzzle.')
+    }
+
+
+  </script>
+  <script src="scripts/language.js"></script>
+  <script src="scripts/level-check.js" id="level-check"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

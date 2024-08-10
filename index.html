@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="styles/bootstrap.min.css" rel="stylesheet">
+  <!--不要忘记更换这里的路径！-->
+  <link href="styles/main.css" rel="stylesheet">
+  <link href="styles/bootstrap-icons.min.css" rel="stylesheet">
+  <title>John Puzzles</title>
+  <link rel="shortcut icon" type="image/x-icon" href=“logo/shortcut.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+SC">
+
+
+</head>
+
+<body>
+  <div id="Navbar"></div>
+  <div class="container">
+    <br>
+    <div class="alert alert-danger -no-out" role="alert">
+      
+    </div>
+    <br>
+    
+    <div class="position-absolute start-50 translate-middle">
+      <h2 class="-puzzle-list d-inline-block"></h2>&emsp;&emsp;
+      <a class="-lock link" onclick="alert('尚未完成！Not finished yet!')"></a>
+    </div>
+    <br>
+    <div class="d-flex flex-wrap" id="puzzle-card-box">
+    </div>
+  </div>
+
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+  <script src="scripts/js.cookie.min.js"></script>
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script>
+    function otherChineseText() {
+      ci('.-no-out', 'Demo 1 版本仅限 Code Party 成员及作者指定人员试玩，严禁外传！')
+    }
+    function otherEnglishText() {
+      ci('.-no-out', 'Version Demo 1 can only be played by the members of Code Party and people who was chosen by the author. Do not send out!')
+    }
+  </script>
+  <script src="scripts/language.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script src="scripts/level-check.js" id="level-check"></script>
+  <script id="generate-cards">
+    const levelLinkList = ['first.html', 'second.html', 'third.html', 'rickroll.html', '80433022.html', '3-5-1-4.html', 'good-job.html', '2025.html', 'miku.html', '440.html']
+    for (let i = 0; i < levelNum; i++) {
+      document.querySelector('#puzzle-card-box').innerHTML += `<a class="text-decoration-none text-body" href="${levelLinkList[i]}"><div class="puzzle-card normal-card text-center" data-num="${i + 1}">
+        <h3>#${i + 1}</h3>
+        <p class="text-muted" id="puzzle-link">${levelLinkList[i]}</p>
+      </div></a>`
+    }
+    const cards = document.querySelectorAll('.puzzle-card')
+    for (let i = 0; i < cards.length; i++) {
+      selectedCard = cards[i]
+      if (Number(selectedCard.dataset.num) > 1 && Number(selectedCard.dataset.num) > Number(Cookies.get('highestLevel'))) {
+        selectedCard.style.filter = 'grayscale(1)'
+        selectedCard.style.opacity = '0.5'
+        selectedCard.parentNode.querySelector('#puzzle-link').innerHTML = '???.html'
+        selectedCard.parentNode.href = '#'
+        selectedCard.parentNode.onclick = function (event) {
+          event.preventDefault();
+        }
+      }
+
+    }
+    document.querySelector('#generate-cards').innerHTML = ''
+  </script>
+</body>
+
+</html>

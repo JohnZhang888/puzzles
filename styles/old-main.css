@@ -1,0 +1,319 @@
+:root {
+  --primary-50: #f0f9ff;
+  --primary-100: #e0f2fe;
+  --primary-200: #bae6fd;
+  --primary-300: #7dd3fc;
+  --primary-400: #38bdf8;
+  --primary-500: #0ea5e9;
+  --primary-600: #0284c7;
+  --primary-700: #0369a1;
+  --primary-800: #075985;
+  --primary-900: #0c4a6e;
+  --primary-950: #082f49;
+  --lt: var(--primary-600);
+  --lt-h: var(--primary-500);
+  --lt-a: var(--primary-700);
+  --dk: var(--primary-300);
+  --dk-h: var(--primary-200);
+  --dk-a: var(--primary-400);
+}
+
+
+
+
+
+.text-john {
+  color: var(--lt);
+}
+
+/*:root {
+  --john-1: #134320;
+  --john-2: #175327;
+  --john-3: #1d642f;
+  --john-4: #227938;
+  --primary-400: #289544;
+(--primary-500: #2fb250;
+  --primary-600: #52c56b;
+  --john-8: #7cd88d;
+  --john-9: #aae8b4;
+  --john-10: #ddf6e0;
+}*/
+
+.text-dark-john {
+  color: var(--primary-400);
+}
+
+.body-link {
+  color: var(--bs-body-color);
+}
+
+[data-bs-theme=dark] {
+  :root {
+    --bs-link-color: var(--dk);
+    --bs-link-hover-color: var(--dk-h);
+  }
+
+  .btn-primary {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--dk);
+    --bs-btn-border-color: var(--dk);
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: var(--dk-h);
+    --bs-btn-hover-border-color: var(--dk-h);
+    --bs-btn-focus-shadow-rgb: 0, 155, 101;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: var(--dk-a);
+    --bs-btn-active-border-color: var(--dk-a);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #ddd;
+    --bs-btn-disabled-border-color: #ddd;
+  }
+
+  .btn-outline-primary {
+    --bs-btn-color: var(--dk);
+    --bs-btn-border-color: var(--dk);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--dk);
+    --bs-btn-hover-border-color: var(--dk);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--dk);
+    --bs-btn-active-border-color: var(--dk);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--dk);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--dk);
+    --bs-gradient: none;
+  }
+
+  .navbar {
+    background-color: #1e293b;
+  }
+
+  .link {
+    color: var(--dk)
+  }
+
+  .link:hover {
+    color: var(--dk-h)
+  }
+
+  .link:active {
+    color: var(--dk-a)
+  }
+
+  .text-primary {
+    color: var(--dk) !important;
+  }
+
+  .dropdown-item {
+    --bs-dropdown-link-active-bg: var(--dk) !important;
+    --bs-dropdown-link-active-color: #000 !important;
+  }
+
+  .body-link:hover {
+    color: var(--dk);
+  }
+
+  .body-link:active {
+    color: var(--dk-a);
+  }
+
+  .badge-primary {
+    background-color: var(--primary-700);
+    color: var(--primary-200);
+  }
+
+  .badge-red {
+    background-color: #b91c1c;
+    color: #fecaca;
+  }
+
+  .badge-blue {
+    background-color: #1e40af;
+    color: #bfdbfe;
+  }
+
+  .badge-orange {
+    background-color: #9a3412;
+    color: #fed7aa;
+  }
+}
+
+[data-bs-theme=light] {
+  --bs-link-color: var(--lt);
+  --bs-link-hover-color: var(--lt-h);
+
+  .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--lt);
+    --bs-btn-border-color: var(--lt);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--lt-h);
+    --bs-btn-hover-border-color: var(--lt-h);
+    --bs-btn-focus-shadow-rgb: 0, 155, 101;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--lt-a);
+    --bs-btn-active-border-color: var(--lt-a);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--primary-400);
+    --bs-btn-disabled-border-color: var(--primary-400);
+  }
+
+  .btn-outline-primary {
+    --bs-btn-color: var(--lt);
+    --bs-btn-border-color: var(--lt);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--lt);
+    --bs-btn-hover-border-color: var(--lt);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--lt);
+    --bs-btn-active-border-color: var(--lt);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--lt);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--lt);
+    --bs-gradient: none;
+  }
+
+  .navbar {
+    background-color: #f1f5f9;
+  }
+
+
+  .link {
+    color: var(--lt)
+  }
+
+  .link:hover {
+    color: var(--lt-h)
+  }
+
+  .link:active {
+    color: var(--lt-a)
+  }
+
+  .text-primary {
+    color: var(--lt) !important;
+  }
+
+  .dropdown-item {
+    --bs-dropdown-link-active-bg: var(--lt) !important;
+    --bs-dropdown-link-active-color: #fff !important;
+  }
+
+
+  .body-link:hover {
+    color: var(--lt);
+  }
+
+  .body-link:active {
+    color: var(--lt-a);
+  }
+
+  .badge-primary {
+    background-color: var(--primary-200);
+    color: var(--primary-700);
+  }
+
+  .badge-red {
+    background-color: #fecaca;
+    color: #b91c1c;
+  }
+
+  .badge-blue {
+    background-color: #bfdbfe;
+    color: #1e40af;
+  }
+
+  .badge-orange {
+    background-color: #fed7aa;
+    color: #9a3412;
+  }
+
+    .available {
+      border: 2px solid var(--primary-400);
+    background-color: var(--primary-100);
+    }
+    
+}
+
+.main-text {
+  max-width: 900px;
+  font-size: 17px;
+  line-height: 160%;
+}
+
+.carousel-image {
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.small-img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.index-img {
+  width: 150px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .index-img {
+    width: 200px;
+  }
+}
+
+
+#logo {
+  height: 36px;
+}
+
+.index-kind-title {
+  text-decoration: none;
+}
+
+.index-kind-title:hover {
+  text-decoration: underline;
+}
+
+.body-link {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Noto Sans', 'Noto Sans SC', sans-serif;
+}
+
+.btn-glass {
+  background-color: rgba(209, 250, 229, 0.8);
+  color: #000;
+  backdrop-filter: blur(10px);
+}
+
+.btn-glass:hover {
+  background-color: rgba(209, 250, 229, 0.9);
+  color: #000;
+}
+
+.btn-glass:active {
+  background-color: rgba(209, 250, 229, 0.7) !important;
+  color: #000 !important;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.puzzle-card {
+  border-radius: 4px;
+  padding: 16px;
+}

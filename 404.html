@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="light" data-num="1">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="styles/bootstrap.min.css" rel="stylesheet">
+  <!--不要忘记更换这里的路径！-->
+  <link href="styles/main.css" rel="stylesheet">
+  <link href="styles/bootstrap-icons.min.css" rel="stylesheet">
+  <title>404 Not Found</title>
+  <link rel="shortcut icon" type="image/x-icon" href=“logo/shortcut.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+SC">
+
+
+</head>
+
+<body class="bg-danger text-white">
+  <div id="Navbar"></div>
+  <div class="container">
+    <br><br>
+    <div class="text-center">
+      <h2>404 Not Found</h2>
+      <p class="-text">
+    </div>
+  </div>
+
+  <script src="scripts/bootstrap.bundle.min.js"></script>
+  <script src="scripts/js.cookie.min.js"></script>
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script>
+    //生成从minNum到maxNum的随机数
+    function randomNum(minNum, maxNum) {
+      switch (arguments.length) {
+        case 1:
+          return parseInt(Math.random() * minNum + 1, 10);
+          break;
+        case 2:
+          return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+          break;
+        default:
+          return 0;
+          break;
+      }
+    }
+    const selectedNum = randomNum(0, 3)
+    function otherChineseText() {
+      switch (selectedNum) {
+        case 0:
+          ci('.-text', '再好好想想吧……')
+          break
+        case 1:
+          ci('.-text', '你的答案与你的智商不匹配。')
+          break
+        case 2:
+          ci('.-text', '你也不想来到这里的，对吧？')
+          break
+        case 3:
+          ci('.-text', '通关服务忙，请稍后再试。')
+      }
+    }
+    function otherEnglishText() {
+      switch (selectedNum) {
+        case 0:
+          ci('.-text', 'Think twice...')
+          break
+        case 1:
+          ci('.-text', 'Your answer is not fit for your IQ.')
+          break
+        case 2:
+          ci('.-text', 'You don\'t wanna come here as well, right?')
+          break
+        case 3:
+          ci('.-text', 'The service of passing the level is busy. Please try later.')
+      }
+    }
+  </script>
+  <script src="scripts/language.js"></script>
+  <script src="scripts/theme.js"></script>
+  <script src="scripts/level-check.js" id="level-check"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
