@@ -9,7 +9,7 @@ document.querySelector('#Navbar').innerHTML = `<nav class="navbar navbar-expand-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link text-body -about" aria-current="page" href="about.html"></a>
+        <a class="nav-link -about disabled" aria-current="page" href="about.html"></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-body -john-homepage" aria-current="page" href="https://johnzhang888.github.io"></a>

@@ -23,9 +23,13 @@
     <br><br>
     <div class="text-center">
       <h2 class="-title"></h2>
-      <div class="-text">
-
+      <div class="-text"></div>
+      <div class="input-group mb-1">
+        <input id="answer-input" type="text" class="form-control" placeholder="" aria-label="答案 Answer"
+          aria-describedby="button-addon2">
       </div>
+      <div id="incorrect" class="-incorrect text-danger-emphasis text-start d-none" style="font-size: 14px;"></div>
+      <p><button class="-submit btn btn-primary mt-3" type="button" onclick="checkAnswer()"></button></p>
     </div>
   </div>
 
@@ -36,20 +40,31 @@
   <script>
     function otherChineseText() {
       ci('.-title', '第 1 题')
-      ci('.-text', `<p>其实John Puzzles根本就不难，只需要点点按钮就行了……</p>
-        <p><a class="btn btn-primary" href="second.html">进入下一题</a></p>`)
+      ci('.-text', `<p>“Two” 的序数词形式是什么？</p>`)
+      ci('.-submit', '提交')
+      ci('.-incorrect', '<i class="bi bi-x-circle-fill"></i>&ensp;答案错误')
+      document.querySelector('#answer-input').placeholder = '答案'
     }
     function otherEnglishText() {
       ci('.-title', 'Puzzle 1')
-      ci('.-text', `<p>In fact, John Puzzles is not difficult at all. The only thing you need to do is to click the buttons...</p>
-        <p><a class="btn btn-primary" href="second.html">Next Puzzle</a></p>`)
+      ci('.-text', `<p>What's the ordinal number form of "Two"?</p>`)
+      ci('.-submit', 'Submit')
+      ci('.-incorrect', '<i class="bi bi-x-circle-fill"></i>&ensp;The answer is incorrect')
+      document.querySelector('#answer-input').placeholder = 'Answer'
     }
   </script>
   <script src="scripts/language.js"></script>
   <script src="scripts/theme.js"></script>
   <script src="scripts/level-check.js" id="level-check"></script>
   <script>
-
+    function checkAnswer() {
+      if (document.querySelector('#answer-input').value === 'second' || document.querySelector('#answer-input').value === 'Second') {
+        window.location.href = "second.html"
+      } else {
+        document.querySelector('#incorrect').classList.remove('d-none')
+        document.querySelector('#answer-input').classList.add('bg-danger-subtle', 'text-danger-emphasis', 'border-danger-subtle')
+      }
+    }
   </script>
 </body>
 

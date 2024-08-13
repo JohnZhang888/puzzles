@@ -12,9 +12,9 @@
   --primary-950: #082f49;  
 }
 [data-bs-theme=light] {
-  --normal: var(--primary-700);
-  --hover: var(--primary-600);
-  --active: var(--primary-800);
+  --normal: var(--primary-600);
+  --hover: var(--primary-500);
+  --active: var(--primary-700);
   --normal-bd: var(--primary-400);
   --normal-bg: var(--primary-100);
   --fg: #fff;  
