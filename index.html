@@ -25,10 +25,10 @@
       <span class="-no-wechat"></span>      
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="Cookies.set('isNoWechatClosed', 'true', { expires: 30000 })"></button>
     </div>
-    <div id="demo-tips" class="alert alert-warning alert-dismissible fade" role="alert">
+    <!--<div id="demo-tips" class="alert alert-warning alert-dismissible fade" role="alert">
       <span class="-demo-tips"></span>      
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="Cookies.set('isDemoTipsClosed', 'true', { expires: 30000 })"></button>
-    </div>
+    </div>-->
     <br>
 
     <div class="position-absolute start-50 translate-middle">
@@ -38,7 +38,7 @@
     <br>
     <div class="d-flex flex-wrap" id="puzzle-card-box">
     </div>
-    <p class="text-muted text-center">Version Demo 2 (Hotfix 1)<br>Released on 2024/8/13</p>
+    <p class="text-muted text-center"><span class="-last-updated"></span> 2024/8/21</p>
   </div>
 
   <script src="scripts/bootstrap.bundle.min.js"></script>
@@ -48,11 +48,13 @@
   <script>
     function otherChineseText() {
       ci('.-no-wechat', '<i class="bi bi-info-circle-fill"></i>&ensp;请不要在微信里游玩本游戏，否则将无法通过大部分关卡。推荐在电脑浏览器中游玩。')
-      ci('.-demo-tips', '<i class="bi bi-exclamation-triangle-fill"></i>&ensp;你正在游玩的是不完整且 bug 较多的 Demo 版本。这一版本仅限 Code Party 成员及作者指定人员试玩，<b>严禁外传</b>！')
+      //ci('.-demo-tips', '<i class="bi bi-exclamation-triangle-fill"></i>&ensp;你正在游玩的是不完整且 bug 较多的 Demo 版本。这一版本仅限 Code Party 成员及作者指定人员试玩，<b>严禁外传</b>！')
+      ci('.-last-updated', '最后更新于')
     }
     function otherEnglishText() {
       ci('.-no-wechat', '<i class="bi bi-info-circle-fill"></i>&ensp;Please not play the game in WeChat, or you can\'t pass most of the levels. It\'s recommended to play it on computer browsers.')
-      ci('.-demo-tips', '<i class="bi bi-exclamation-triangle-fill"></i>&ensp;What you are playing is the demo version which is not completed and with more bugs. This version can only be played by the members of Code Party and people who was chosen by the author. <b>DO NOT LEAK!</b>')
+      //ci('.-demo-tips', '<i class="bi bi-exclamation-triangle-fill"></i>&ensp;What you are playing is the demo version which is not completed and with more bugs. This version can only be played by the members of Code Party and people who was chosen by the author. <b>DO NOT LEAK!</b>')
+      ci('.-last-updated', 'Last updated on')    
     }
   </script>
   <script src="scripts/language.js"></script>
@@ -89,12 +91,12 @@
     } else {
       document.querySelector('#no-wechat').classList.add('d-none')
     }
-    if (Cookies.get('isDemoTipsClosed') != 'true') {
+    /*if (Cookies.get('isDemoTipsClosed') != 'true') {
       Cookies.set('isDemoTipsClosed', 'false', { expires: 30000 })
       document.querySelector('#demo-tips').classList.add('show')
     } else {
       document.querySelector('#demo-tips').classList.add('d-none')
-    }
+    }*/
   </script>
 </body>
 

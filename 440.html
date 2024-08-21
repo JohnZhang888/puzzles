@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-bs-theme="light" data-num="10">
+<html lang="zh-CN" data-bs-theme="light" data-num="11">
 
 <head>
   <meta charset="utf-8">
@@ -13,43 +13,61 @@
   <title class="-title"></title>
   <link rel="shortcut icon" type="image/x-icon" href=“logo/shortcut.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+SC">
-  <link rel="stylesheet" href="styles/Cantarell-VF.otf">
 
 
 </head>
 
-<body class="bg-success text-white">
+<body>
   <div id="Navbar"></div>
   <div class="container puzzle-box d-none">
     <br><br>
     <div class="text-center">
       <h2 class="-title"></h2>
-      <p class="-text"></p>
+      <div class="-text"></div>
+      <div class="input-group mb-1">
+        <input id="answer-input" type="text" class="form-control" placeholder="" aria-label="答案 Answer"
+          aria-describedby="button-addon2">
+      </div>
+      <div id="incorrect" class="-incorrect text-danger-emphasis text-start d-none" style="font-size: 14px;"></div>
+      <p><button class="-submit btn btn-primary mt-3" type="button" onclick="checkAnswer()"></button></p>
     </div>
   </div>
-  </div>
 
+  <script src="scripts/sha256.min.js"></script>
   <script src="scripts/bootstrap.bundle.min.js"></script>
   <script src="scripts/js.cookie.min.js"></script>
   <script src="scripts/jquery-3.7.1.min.js"></script>
   <script src="scripts/components.js"></script>
-  <script src="scripts/theme.js"></script>
   <script>
     function otherChineseText() {
-      ci('.-title', '恭喜！')
-      ci('.-text', '你已通过 John Puzzles Demo 1 的全部关卡。敬请期待游戏的后续开发。感谢游玩！')
+      ci('.-title', '第 10 题')
+      ci('.-text', `<p>请输入答案。</p>`)
+      ci('.-submit', '提交')
+      ci('.-incorrect', '<i class="bi bi-x-circle-fill"></i>&ensp;答案<b>错误</b>')
+      document.querySelector('#answer-input').placeholder = '答案'
     }
     function otherEnglishText() {
-      ci('.-title', 'Congratulations!')
-      ci('.-text', 'You have passed all the levels of John Puzzles Demo 1. Please look forward to the development in the future of the game. Thanks for your playing!')
+      ci('.-title', 'Puzzle 10')
+      ci('.-text', `<p>Please input the answer.</p>`)
+      ci('.-submit', 'Submit')
+      ci('.-incorrect', '<i class="bi bi-x-circle-fill"></i>&ensp;The answer is <b>incorrect</b>')
+      document.querySelector('#answer-input').placeholder = 'Answer'
     }
-
-
   </script>
   <script src="scripts/language.js"></script>
+  <script src="scripts/theme.js"></script>
   <script src="scripts/level-check.js" id="level-check"></script>
   <script>
-
+    function checkAnswer() {
+      const answerSha256 = sha256(document.querySelector('#answer-input').value)
+      if (answerSha256 === '203d3536bd62ad33ac70b7ea3d4f5e10b6d52ebd0cb7582841a053aebb7186a3' || answerSha256 === '0bc1fb72ae1be5c5f95031df7a72d2dd795c5405548e9098e81f90c64190f52d') {
+        Cookies.set('isAbleToIncorrect', 'true', { expires: 30000 })
+        window.location.href = "incorrect.html"
+      } else {
+        document.querySelector('#incorrect').classList.remove('d-none')
+        document.querySelector('#answer-input').classList.add('bg-danger-subtle', 'text-danger-emphasis', 'border-danger-subtle')
+      }
+    }
   </script>
 </body>
 
