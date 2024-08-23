@@ -1,4 +1,4 @@
-const levelNum = 11
+const levelNum = 13
 
 if (Cookies.get('highestLevel') == undefined) {
   Cookies.set('highestLevel', 0, { expires: 30000 })

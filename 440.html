@@ -30,6 +30,19 @@
       </div>
       <div id="incorrect" class="-incorrect text-danger-emphasis text-start d-none" style="font-size: 14px;"></div>
       <p><button class="-submit btn btn-primary mt-3" type="button" onclick="checkAnswer()"></button></p>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="-tips accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="-tips-text accordion-body">
+            </div>
+          </div>
+        </div>  
+      </div>
     </div>
   </div>
 
@@ -44,6 +57,7 @@
       ci('.-text', `<p>请输入答案。</p>`)
       ci('.-submit', '提交')
       ci('.-incorrect', '<i class="bi bi-x-circle-fill"></i>&ensp;答案<b>错误</b>')
+      ci('.-tips-text', '谜底已经写在谜面上了。')
       document.querySelector('#answer-input').placeholder = '答案'
     }
     function otherEnglishText() {
@@ -51,6 +65,7 @@
       ci('.-text', `<p>Please input the answer.</p>`)
       ci('.-submit', 'Submit')
       ci('.-incorrect', '<i class="bi bi-x-circle-fill"></i>&ensp;The answer is <b>incorrect</b>')
+      ci('.-tips-text', 'The answer is already on the question.')
       document.querySelector('#answer-input').placeholder = 'Answer'
     }
   </script>
@@ -62,6 +77,7 @@
       const answerSha256 = sha256(document.querySelector('#answer-input').value)
       if (answerSha256 === '203d3536bd62ad33ac70b7ea3d4f5e10b6d52ebd0cb7582841a053aebb7186a3' || answerSha256 === '0bc1fb72ae1be5c5f95031df7a72d2dd795c5405548e9098e81f90c64190f52d') {
         Cookies.set('isAbleToIncorrect', 'true', { expires: 30000 })
+        //偷看这里代码的玩家是屑
         window.location.href = "incorrect.html"
       } else {
         document.querySelector('#incorrect').classList.remove('d-none')

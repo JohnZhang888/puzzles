@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-bs-theme="light" data-num="11">
+<html lang="zh-CN" data-bs-theme="light" data-num="10">
 
 <head>
   <meta charset="utf-8">
@@ -13,55 +13,46 @@
   <title class="-title"></title>
   <link rel="shortcut icon" type="image/x-icon" href=“logo/shortcut.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+SC">
+  <link rel="stylesheet" href="styles/Cantarell-VF.otf">
 
 
 </head>
 
-<body>
+<body class="bg-success text-white">
   <div id="Navbar"></div>
   <div class="container puzzle-box d-none">
     <br><br>
     <div class="text-center">
       <h2 class="-title"></h2>
-      <div class="-text">
-      </div>
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="-tips accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="-tips-text accordion-body">
-            </div>
-          </div>
-        </div>
-
-
-      </div>
+      <p class="-text"></p>
     </div>
+  </div>
   </div>
 
   <script src="scripts/bootstrap.bundle.min.js"></script>
   <script src="scripts/js.cookie.min.js"></script>
   <script src="scripts/jquery-3.7.1.min.js"></script>
   <script src="scripts/components.js"></script>
+  <script src="scripts/theme.js"></script>
   <script>
     function otherChineseText() {
-      ci('.-title', '第 11 题')
-      ci('.-text', `<p>0.4714, 0.4330, 0.4000, 0.3727, ?</p>`)
-      ci('.-tips-text', '试着把它们跟一些正整数相乘，看看有什么规律？')
+      ci('.-title', '恭喜！')
+      ci('.-text', '你已通过 John Puzzles 目前的全部关卡。敬请期待游戏的后续开发。感谢游玩！')
     }
     function otherEnglishText() {
-      ci('.-title', 'Puzzle 11')
-      ci('.-text', `<p>0.4714, 0.4330, 0.4000, 0.3727, ?</p>`)
-      ci('.-tips-text', 'Try multiplying them by some positive integers and see what the pattern is?')
+      ci('.-title', 'Congratulations!')
+      ci('.-text', 'You have passed all the levels of John Puzzles so far. Please look forward to the development in the future of the game. Thanks for your playing!')
     }
+
+
   </script>
   <script src="scripts/language.js"></script>
-  <script src="scripts/theme.js"></script>
   <script src="scripts/level-check.js" id="level-check"></script>
+  <script>
+    if (Cookies.get('isAbleToIncorrect') != 'true') {
+      window.location.href = '404.html'
+    }
+  </script>
   <script>
 
   </script>
