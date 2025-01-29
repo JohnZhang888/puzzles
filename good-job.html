@@ -24,6 +24,10 @@
     <br><br>
     <div class="text-center">
       <h2 class="-title"></h2>
+      <div class="text-start alert alert-info d-flex align-items-center d-none" id="jump-tips" role="alert">
+        <i class="bi bi-info-circle-fill"></i>&emsp;
+        <div class="-jump-tips"></div>
+      </div>
       <p class="-text" style="font-size: 24px;">\(\left [ \frac{2026!+2023!}{2025!+2024!} \right ] \)</p>
     </div>
     <div class="accordion" id="accordionExample">
@@ -50,7 +54,13 @@
   <script src="scripts/components.js"></script>
   <script src="scripts/theme.js"></script>
   <script src="scripts/tex-mml-chtml.js"></script>
+  <!--Too slow without the font I want <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
   <script>
+    if(Cookies.get('didMobileJump') == 'true') {
+      //Cookies.set('didMobileJump', 'false', { expires: 30000 })
+      document.querySelector('#jump-tips').classList.remove('d-none')
+    }
+
     function otherChineseText() {
       ci('.-title', '第 7 题')
       ci('.-tips-text', '[x]表示向下取整。')

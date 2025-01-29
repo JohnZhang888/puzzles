@@ -21,6 +21,7 @@ function toChinese() {
   ci('.-puzzle-list', '谜题列表')
   ci('.-lock', '<i class="bi bi-lock"></i> 锁定谜题')
   ci('.-tips', '提示')
+  ci('.-jump-tips', '由于您正使用手机或平板，已跳过电脑专属关卡。')
   $('.No-english').hide();
   
   otherChineseText()
@@ -39,6 +40,7 @@ function toEnglish() {
   ci('.-puzzle-list', 'Puzzle List')
   ci('.-lock', '<i class="bi bi-lock"></i> Lock Puzzles')
   ci('.-tips', 'Tips')
+  ci('.-jump-tips', 'Due to you\'re using a phone or a tablet, a PC-only level has been skipped.')
   $('.No-english').show();
   
   otherEnglishText()
