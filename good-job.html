@@ -11,7 +11,7 @@
   <link href="styles/main.css" rel="stylesheet">
   <link href="styles/bootstrap-icons.min.css" rel="stylesheet">
   <title class="-title"></title>
-  <link rel="shortcut icon" type="image/x-icon" href=“logo/shortcut.png">
+  <link rel="shortcut icon" type="image/png" href="logo/shortcut.png">
 
 
 </head>
@@ -51,8 +51,11 @@
   <script src="scripts/jquery-3.7.1.min.js"></script>
   <script src="scripts/components.js"></script>
   <script src="scripts/theme.js"></script>
+  <!-- MathJax 配置：公式字体已下载到本地，不再依赖任何 CDN -->
+  <script>
+    window.MathJax = { chtml: { fontURL: "styles/fonts/mathjax/woff-v2" } }
+  </script>
   <script src="scripts/tex-mml-chtml.js"></script>
-  <!--Too slow without the font I want <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
   <script>
     if(Cookies.get('didMobileJump') == 'true') {
       //Cookies.set('didMobileJump', 'false', { expires: 30000 })

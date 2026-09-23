@@ -1,3 +1,5 @@
-图寻1 https://pic1.imgdb.cn/item/679a4475d0e0a243d4f87ac7.png
-图寻2 https://pic1.imgdb.cn/item/679a44add0e0a243d4f87aca.png
-666 https://pic1.imgdb.cn/item/679a46a5d0e0a243d4f87ae6.jpg
+# 关卡图片清单（图片均已下载到项目本地，页面不再请求图床）
+# 名称	本地路径	原始来源
+图寻1	images/hallo-1.png	https://pic1.imgdb.cn/item/679a4475d0e0a243d4f87ac7.png
+图寻2	images/hallo-2.png	https://pic1.imgdb.cn/item/679a44add0e0a243d4f87aca.png
+666	images/nanshan.jpg	https://pic1.imgdb.cn/item/679a46a5d0e0a243d4f87ae6.jpg
