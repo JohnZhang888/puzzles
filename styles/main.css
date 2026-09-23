@@ -94,11 +94,22 @@
   font-size: 1.125rem;
 }
 
+/* 默认英文字体：Inter（本地托管，可变字体，字重 100–900，不依赖任何第三方字体 API） */
 @font-face {
-  font-family: "Cantarell";
-  src: url("Cantarell-VF.otf");
+  font-family: "Inter";
+  src: url("fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/InterVariable-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 * {
-  font-family: "Cantarell", "Noto Sans SC", sans-serif
+  font-family: "Inter", sans-serif
 }
